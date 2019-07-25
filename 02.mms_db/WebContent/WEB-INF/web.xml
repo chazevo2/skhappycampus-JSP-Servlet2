@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>01.hello_servlet</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>aaa</servlet-name>
+    <servlet-class>com.work.controller.LoginServlet</servlet-class>
+    <init-param>
+      <param-name>title</param-name>
+      <param-value>한국 제목</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet>
+    <servlet-name>bbb</servlet-name>
+    <servlet-class>com.work.controller.LoginServlet</servlet-class>
+    <init-param>
+      <param-name>title</param-name>
+      <param-value>eng title</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>aaa</servlet-name>
+    <url-pattern>/han/aaa</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>bbb</servlet-name>
+    <url-pattern>/eng/bbb</url-pattern>
+  </servlet-mapping>
+</web-app>
